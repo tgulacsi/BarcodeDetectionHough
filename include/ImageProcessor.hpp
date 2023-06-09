@@ -14,7 +14,7 @@ namespace artelab
     {
     public:
 
-        ImageProcessor(std::string mlp_file, cv::Size win_size, std::string outdir="", bool quiet=false, bool show=false);
+        ImageProcessor(std::string mlp_file, cv::Size win_size, std::string outdir="", bool quiet=false);
         virtual ~ImageProcessor();
 
         ImageProcessor& show(bool b=true);
@@ -29,8 +29,6 @@ namespace artelab
         DirectoryInfo _output;
         bool _show;
         bool _quiet;
-
-        void show_image(std::string name, cv::Mat img);
     };
 
 }

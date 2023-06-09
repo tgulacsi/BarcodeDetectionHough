@@ -65,7 +65,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lboost_filesystem -lboost_system -lboost_chrono -lboost_program_options -lopencv_core -lopencv_highgui -lopencv_ml -lopencv_imgproc -lopencv_imgcodecs
+LDLIBSOPTIONS=-lboost_filesystem -lboost_system -lboost_chrono -lboost_program_options -lopencv_core -lopencv_ml -lopencv_imgproc -lopencv_imgcodecs
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}

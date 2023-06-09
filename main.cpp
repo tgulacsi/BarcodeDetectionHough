@@ -18,7 +18,6 @@ using std::endl;
 using std::vector;
 namespace po = boost::program_options;
 
-bool display = false;
 bool quiet = false;
 string datasetdir = "dataset";
 string netfile = "net61x3.net";
@@ -52,7 +51,6 @@ int main(int argc, char** argv)
         ("netfile,n",       po::value<string>()->default_value(netfile),         "trained network file")
         ("output,o",        po::value<string>()->default_value(outdir),          "if specified, intermediate images are saved there")
         ("whitelist,w",     po::value<string>()->default_value(whitelist),       "list of image names to process")
-        ("show,s",                                                               "show intermediate images")
         ("quiet,q",                                                              "suppress verbose output")
     ;
 
@@ -69,7 +67,6 @@ int main(int argc, char** argv)
     datasetdir = vm["dataset"].as<string>();
     outdir = vm["output"].as<string>();
     whitelist = vm["whitelist"].as<string>();
-    display = vm.count("show") > 0;
     quiet = vm.count("quiet") > 0;
     netfile = vm["netfile"].as<string>();
 
@@ -92,7 +89,7 @@ int main(int argc, char** argv)
     int count = 0;
     cv::Mat jaccard_hist = cv::Mat::zeros(10, 1, CV_32F);
 
-    ImageProcessor pr(netfile, win_size, outdir, quiet, display);
+    ImageProcessor pr(netfile, win_size, outdir, quiet);
 
     for(it = images.begin(); it != images.end(); it++)
     {
@@ -107,16 +104,6 @@ int main(int argc, char** argv)
         time += res.time;
         jaccard_hist += res.jaccard_hist;
         count++;
-
-        if(display)
-        {
-            char c;
-            do
-            {
-                c = cv::waitKey();
-            } while (c != 32);
-        }
-
     }
 
     cout << endl

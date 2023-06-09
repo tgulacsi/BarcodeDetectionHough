@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#sudo apt install libopencv-{core,highgui,ml}-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev 
+#sudo apt install libopencv-{core,ml}-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev 
 grep -lr '#include <opencv2/#include <opencv2/ s,opencv2/[^/]*/,opencv2/,' 
 grep -Flr -- '-Iinclude' $(find . -type f -name 'Makefile*') | while read -r fn; do
   if ! grep -Fq -- '-I/usr/include/opencv4'; then
