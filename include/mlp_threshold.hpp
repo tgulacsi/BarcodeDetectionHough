@@ -2,7 +2,7 @@
 #ifndef MAKE_PATTERNS_HPP
 #define	MAKE_PATTERNS_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 
 #include "MLP.hpp"
 #include "HoughTransform.hpp"

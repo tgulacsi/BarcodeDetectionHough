@@ -2,7 +2,7 @@
 #ifndef DETECTION_HPP
 #define	DETECTION_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 
 namespace artelab
 {

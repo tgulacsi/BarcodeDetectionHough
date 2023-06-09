@@ -26,6 +26,7 @@ namespace artelab
     {
         this->_base_dir = other._base_dir;
         this->_data = other._data;
+        return *this;
     }
 
     void ArtelabDataset::load_dataset()

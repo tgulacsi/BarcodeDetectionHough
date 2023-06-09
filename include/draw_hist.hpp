@@ -2,7 +2,7 @@
 #ifndef DRAW_AND_SHOW_HPP
 #define	DRAW_AND_SHOW_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 
 namespace artelab
 {

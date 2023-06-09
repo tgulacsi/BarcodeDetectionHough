@@ -2,7 +2,7 @@
 #ifndef IMAGEPROCESSOR_HPP
 #define	IMAGEPROCESSOR_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 
 #include "MLP.hpp"
 #include "ArtelabDataset.hpp"

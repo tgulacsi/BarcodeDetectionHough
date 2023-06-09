@@ -2,7 +2,7 @@
 #ifndef ACCURACY_HPP
 #define	ACCURACY_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 #include "TimeCounter.hpp"
 
 namespace artelab

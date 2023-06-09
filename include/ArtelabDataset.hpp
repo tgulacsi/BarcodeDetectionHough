@@ -2,7 +2,7 @@
 #ifndef BARCODEDATASET_HPP
 #define	BARCODEDATASET_HPP
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 #include <map>
 #include "DirectoryInfo.hpp"
 

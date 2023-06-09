@@ -1,5 +1,5 @@
 
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc.hpp>
 
 #include "hough_histogram.hpp"
 #include "draw_hist.hpp"
@@ -12,7 +12,7 @@ namespace artelab
         cv::Mat image;
         img.copyTo(image);
         if(img.type() == CV_8U)
-            cv::cvtColor(image, image, CV_GRAY2BGR);
+            cv::cvtColor(image, image, cv::COLOR_GRAY2BGR);
 
         double min, max;
         cv::minMaxLoc(hist, &min, &max);

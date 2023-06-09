@@ -77,72 +77,72 @@ barcodedetection: ${OBJECTFILES}
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/src/ArtelabDataset.o: src/ArtelabDataset.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ArtelabDataset.o src/ArtelabDataset.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ArtelabDataset.o src/ArtelabDataset.cpp
 
 ${OBJECTDIR}/src/HoughTransform.o: src/HoughTransform.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/HoughTransform.o src/HoughTransform.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/HoughTransform.o src/HoughTransform.cpp
 
 ${OBJECTDIR}/src/ImageProcessor.o: src/ImageProcessor.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ImageProcessor.o src/ImageProcessor.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ImageProcessor.o src/ImageProcessor.cpp
 
 ${OBJECTDIR}/src/MLP.o: src/MLP.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MLP.o src/MLP.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MLP.o src/MLP.cpp
 
 ${OBJECTDIR}/src/accuracy.o: src/accuracy.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/accuracy.o src/accuracy.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/accuracy.o src/accuracy.cpp
 
 ${OBJECTDIR}/src/detection.o: src/detection.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/detection.o src/detection.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/detection.o src/detection.cpp
 
 ${OBJECTDIR}/src/draw_hist.o: src/draw_hist.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/draw_hist.o src/draw_hist.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/draw_hist.o src/draw_hist.cpp
 
 ${OBJECTDIR}/src/hough_histogram.o: src/hough_histogram.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/hough_histogram.o src/hough_histogram.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/hough_histogram.o src/hough_histogram.cpp
 
 ${OBJECTDIR}/src/mlp_threshold.o: src/mlp_threshold.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mlp_threshold.o src/mlp_threshold.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mlp_threshold.o src/mlp_threshold.cpp
 
 ${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o: utils-3rdparty/DirectoryInfo.cpp 
 	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o utils-3rdparty/DirectoryInfo.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o utils-3rdparty/DirectoryInfo.cpp
 
 ${OBJECTDIR}/utils-3rdparty/FileInfo.o: utils-3rdparty/FileInfo.cpp 
 	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/FileInfo.o utils-3rdparty/FileInfo.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/FileInfo.o utils-3rdparty/FileInfo.cpp
 
 ${OBJECTDIR}/utils-3rdparty/TimeCounter.o: utils-3rdparty/TimeCounter.cpp 
 	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/TimeCounter.o utils-3rdparty/TimeCounter.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/TimeCounter.o utils-3rdparty/TimeCounter.cpp
 
 ${OBJECTDIR}/utils-3rdparty/utils.o: utils-3rdparty/utils.cpp 
 	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/utils.o utils-3rdparty/utils.cpp
+	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/utils.o utils-3rdparty/utils.cpp
 
 # Subprojects
 .build-subprojects:

@@ -1,5 +1,5 @@
 
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc.hpp>
 #include <boost/foreach.hpp>
 
 #include "detection.hpp"
@@ -41,7 +41,7 @@ namespace artelab
 
         vector<vector<cv::Point> > contours;
         vector<cv::Vec4i> hierarchy;
-        cv::findContours(img_thresh, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0,0));
+        cv::findContours(img_thresh, contours, hierarchy, cv::RetrievalModes::RETR_TREE, cv::ContourApproximationModes::CHAIN_APPROX_SIMPLE, cv::Point(0,0));
 
         foreach(vector<cv::Point> cont, contours)
         {

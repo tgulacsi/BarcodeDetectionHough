@@ -1,7 +1,8 @@
 
 #include <boost/foreach.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
 #include <iomanip>
 
 #include "HoughTransform.hpp"
@@ -122,8 +123,8 @@ namespace artelab
 
     results ImageProcessor::process(std::string name, ArtelabDataset::barcode_image bcimage)
     {
-        cv::Mat img_orig = cv::imread(bcimage.original.fullName(), CV_LOAD_IMAGE_COLOR);
-        cv::Mat img_truth = cv::imread(bcimage.detection_gt.fullName(), CV_LOAD_IMAGE_GRAYSCALE);
+        cv::Mat img_orig = cv::imread(bcimage.original.fullName(), cv::IMREAD_COLOR);
+        cv::Mat img_truth = cv::imread(bcimage.detection_gt.fullName(), cv::IMREAD_GRAYSCALE);
 
         TimeCounter tc;
         tc.start();
@@ -151,7 +152,7 @@ namespace artelab
         if(_show)
         {
             // impress lines of given angle on the canny image
-            cv::cvtColor(img_canny, line_image, CV_GRAY2BGR);
+            cv::cvtColor(img_canny, line_image, cv::COLOR_GRAY2BGR);
             draw_lines_at_angle((int(angle+0.5) + 90) % 180, lines, line_image, tolerance);
         }
 

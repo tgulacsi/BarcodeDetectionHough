@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 #include <sys/stat.h>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc.hpp>
 #include "utils.hpp"
 
 namespace artelab 
