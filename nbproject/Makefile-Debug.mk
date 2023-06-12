@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/src/ArtelabDataset.o \
 	${OBJECTDIR}/src/HoughTransform.o \
 	${OBJECTDIR}/src/MLP.o \
 	${OBJECTDIR}/src/accuracy.o \
@@ -44,7 +43,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/draw_hist.o \
 	${OBJECTDIR}/src/hough_histogram.o \
 	${OBJECTDIR}/src/mlp_threshold.o \
-	${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o \
 	${OBJECTDIR}/utils-3rdparty/FileInfo.o \
 	${OBJECTDIR}/utils-3rdparty/TimeCounter.o \
 	${OBJECTDIR}/utils-3rdparty/utils.o \
@@ -78,11 +76,6 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/src/ArtelabDataset.o: src/ArtelabDataset.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ArtelabDataset.o src/ArtelabDataset.cpp
 
 ${OBJECTDIR}/src/HoughTransform.o: src/HoughTransform.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -123,11 +116,6 @@ ${OBJECTDIR}/src/mlp_threshold.o: src/mlp_threshold.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mlp_threshold.o src/mlp_threshold.cpp
-
-${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o: utils-3rdparty/DirectoryInfo.cpp 
-	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -I/usr/include/opencv4 -Iutils-3rdparty -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils-3rdparty/DirectoryInfo.o utils-3rdparty/DirectoryInfo.cpp
 
 ${OBJECTDIR}/utils-3rdparty/FileInfo.o: utils-3rdparty/FileInfo.cpp 
 	${MKDIR} -p ${OBJECTDIR}/utils-3rdparty

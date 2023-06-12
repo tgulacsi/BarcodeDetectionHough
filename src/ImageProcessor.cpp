@@ -24,7 +24,7 @@ namespace artelab
         _winsize(win_size)
     {
         _mlp.load(mlp_file);
-        _output = DirectoryInfo(outdir);
+        _output = outdir;
     }
 
     ImageProcessor::~ImageProcessor()
@@ -38,7 +38,7 @@ namespace artelab
 
     ImageProcessor& ImageProcessor::set_output(std::string outdir)
     {
-        _output = DirectoryInfo(outdir);
+        _output = outdir;
         return *this;
     }
 
@@ -112,10 +112,9 @@ namespace artelab
         return out;
     }
 
-    results ImageProcessor::process(std::string name, ArtelabDataset::barcode_image bcimage)
+    results ImageProcessor::process(std::string name)
     {
-        cv::Mat img_orig = cv::imread(bcimage.original.fullName(), cv::IMREAD_COLOR);
-        cv::Mat img_truth = cv::imread(bcimage.detection_gt.fullName(), cv::IMREAD_GRAYSCALE);
+        cv::Mat img_orig = cv::imread(name, cv::IMREAD_COLOR);
 
         TimeCounter tc;
         tc.start();
@@ -193,58 +192,53 @@ namespace artelab
 
         tc.stop();
 
-        // Measuring accuracy
-        results res = measure_results(img_detection_mask, img_truth, tc);
-
         // verbose output
         if(!_quiet)
         {
             std::cout << std::setw(15) << std::left << name;
             std::cout << std::setw(11) << std::left << ("Angle " + tostring(angle));
-            std::cout << std::setw(20) << std::left << ("Accuracy: " + tostring(res.jaccard));
-            std::cout << std::setw(6) << std::left << ("Time: " + tostring(res.time)) << std::endl;
         }
 
         // saving intermediate images
-        if(_output.fullPath() != "")
+        if(_output != "")
         {
             std::ostringstream ss;
 
             // Original
             ss << name << "_1_original.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), img_orig);
+            cv::imwrite(_output + "/" + ss.str(), img_orig);
 
             // Hough accumulator
             ss.str(""); ss.clear(); ss << name << "_2_accumulator.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), hough.get_hough_image());
+            cv::imwrite(_output + "/" + ss.str(), hough.get_hough_image());
 
             // Hough MLP threshold
             img_neural = draw_histogram_on_image(get_histogram(img_neural, HIST_ROW, CV_32F), img_neural, cv::Scalar(0,0,255), HIST_ROW);
             ss.str(""); ss.clear();; ss << name << "_3_thresh_mlp.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), img_neural);
+            cv::imwrite(_output + "/" + ss.str(), img_neural);
 
             // Feature with histograms not processed
             histograms_from_hough_lines(feature_image, row_hist, col_hist, false);
             cv::Mat feature_with_hist = draw_histogram_on_image(row_hist, feature_image, cv::Scalar(0,0,255), HIST_ROW);
             feature_with_hist = draw_histogram_on_image(col_hist, feature_with_hist, cv::Scalar(0,255,0), HIST_COL);
             ss.str(""); ss.clear();; ss << name << "_4_hist.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), feature_with_hist);
+            cv::imwrite(_output + "/" + ss.str(), feature_with_hist);
 
             // Feature with processed histograms
             ss.str(""); ss.clear();; ss << name << "_5_hist_smooth_thresh.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), feature_with_hist_smooth);
+            cv::imwrite(_output + "/" + ss.str(), feature_with_hist_smooth);
 
             // Histogram projection
             ss.str(""); ss.clear();; ss << name << "_6_hist_projection.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), img_hist_projection);
+            cv::imwrite(_output + "/" + ss.str(), img_hist_projection);
 
             // Bounding boxes
             ss.str(""); ss.clear();; ss << name << "_7_boxes.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), img_bb);
+            cv::imwrite(_output + "/" + ss.str(), img_bb);
 
             // Canny
             ss.str(""); ss.clear(); ss << name << "_canny.png";
-            cv::imwrite(_output.fileCombine(ss.str()).fullName(), img_canny);
+            cv::imwrite(_output + "/" + ss.str(), img_canny);
         }
 
         return res;
